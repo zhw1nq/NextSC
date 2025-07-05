@@ -1,0 +1,22 @@
+services:
+  next-sc:
+    image: gitea-nzt.l1te.pw/l1te/next-sc-enterprise:latest
+    network_mode: host
+    container_name: next-sc
+    env_file:
+      - ./next-sc.env
+    restart: unless-stopped
+    volumes:
+      - ./public:/app/public
+      - ./customs:/app/customs
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=300  # check for updates every 5 minutes
+      - WATCHTOWER_INCLUDE_STOPPED=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

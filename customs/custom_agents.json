@@ -1,0 +1,26 @@
+[
+    {
+        "id": "agent-C001",
+        "name": "Yoshino | Custom agent",
+        "rarity": {
+            "color":"#FFFF00"
+        },
+        "team": {
+            "id": "counter-terrorists"
+        },
+        "image": "/custom_agents/yoshino.png",
+        "model_player": "characters/models/nozb1/yoshino_player_model/yoshino_player_model.vmdl_c"
+    },
+    {
+        "id": "agent-C002",
+        "name": "Chocola | Custom agent",
+        "rarity": {
+            "color":"#FFFF00"
+        },
+        "team": {
+            "id": "terrorists"
+        },
+        "image": "/custom_agents/chocola.png",
+        "model_player": "characters/models/nozb1/chocola_player_model/chocola_player_model.vmdl_c"
+    }
+]
